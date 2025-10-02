@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+.env/
+
+# Python compilation artifacts
+*.pyc
+__pycache__/
+*.so
+*.o
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and output (Based on your project structure)
+logs/
+test_samples/
+uploads/
