@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Group Detection using Fingerprint</title>
+</head>
+<body>
+    <h2>🩸 Blood Group Detection using Fingerprint</h2>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label><input type="radio" name="inputMode" value="upload" checked> 📁 Upload Fingerprint</label><br>
+        <input type="file" name="file"><br><br>
+
+        <label><input type="radio" name="inputMode" value="scan"> 🔍 Live Scan (R307S)</label><br><br>
+
+        <button type="submit">Predict Blood Group</button>
+    </form>
+
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>
+        <img src="{{ image_path }}" width="200">
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blood Group Prediction Result</title>
+</head>
+<body>
+    <h1>🧬 Blood Group Prediction Result</h1>
+
+    <img src="{{ url_for('static', filename=image_path.split('static/')[-1]) }}" alt="Fingerprint Image" width="200" />
+
+    <h2>Predicted Blood Group: <span style="color:green">{{ blood_group }}</span></h2>
+    <h3>Confidence: {{ confidence }}%</h3>
+
+    <br><a href="{{ url_for('index') }}">🔁 Predict Another</a>
+</body>
+</html>
